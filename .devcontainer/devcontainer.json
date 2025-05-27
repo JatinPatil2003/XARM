@@ -1,0 +1,29 @@
+{
+  "name": "xarm_ros2_dev",
+  // "image": "timepass:latest",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "../"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-iot.vscode-ros",
+        "ms-vscode.cpptools",
+        "ms-python.python"
+      ]
+    }
+  },
+  "runArgs": [
+    "--env", "DISPLAY=192.168.240.32:0.0",
+    "--env", "QT_X11_NO_MITSHM=1",
+    "--volume", "/tmp/.X11-unix:/tmp/.X11-unix"
+  ],
+  "workspaceFolder": "/home/vscode/XARM",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/home/vscode/XARM,type=bind"
+  ],
+  // "onCreateCommand": "bash .devcontainer/create.sh",
+  "updateContentCommand": "bash .devcontainer/update_content.sh",
+  "postCreateCommand": "bash .devcontainer/post_create.sh"
+}
