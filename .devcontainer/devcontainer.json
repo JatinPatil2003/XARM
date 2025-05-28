@@ -1,5 +1,5 @@
 {
-  "name": "xarm_ros2_dev",
+  "name": "xarm_dev",
   // "image": "timepass:latest",
   "build": {
     "dockerfile": "Dockerfile",
@@ -8,22 +8,105 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "bierner.github-markdown-preview",
+        "bierner.markdown-checkbox",
+        "bierner.markdown-emoji",
+        "bierner.markdown-footnotes",
+        "bierner.markdown-mermaid",
+        "bierner.markdown-preview-github-styles",
+        "bierner.markdown-yaml-preamble",
+        "blackboxapp.blackbox",
+        "circleci.circleci",
+        "dbaeumer.vscode-eslint",
+        "docker.docker",
+        "donjayamanne.githistory",
+        "dotjoshjohnson.xml",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "fabianlauer.vs-code-xml-format",
+        "formulahendry.code-runner",
+        "github.codespaces",
+        "github.copilot",
+        "github.copilot-chat",
+        "github.github-vscode-theme",
+        "github.vscode-github-actions",
+        "github.vscode-pull-request-github",
+        "hansrobo.ros2-snippets",
+        "jaehyunshim.vscode-ros",
+        "jaehyunshim.vscode-ros2",
+        "mhutchie.git-graph",
+        "mine.cpplint",
+        "mongodb.mongodb-vscode",
+        "ms-azuretools.vscode-containers",
         "ms-iot.vscode-ros",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "ms-python.black-formatter",
+        "ms-python.debugpy",
+        "ms-python.flake8",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode-remote.remote-ssh",
+        "ms-vscode-remote.remote-ssh-edit",
+        "ms-vscode.cmake-tools",
         "ms-vscode.cpptools",
-        "ms-python.python"
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cpptools-themes",
+        "ms-vscode.remote-explorer",
+        "ms-vsliveshare.vsliveshare",
+        "nonanonno.vscode-ros2",
+        "pijar.ros-snippets",
+        "pkief.material-icon-theme",
+        "platformio.platformio-ide",
+        "redhat.java",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml",
+        "sweilz.ros-snippets",
+        "tabnine.tabnine-vscode",
+        "tomoki1207.pdf",
+        "twxs.cmake",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "visualstudioexptteam.vscodeintellicode",
+        "vscjava.vscode-gradle",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-dependency",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-java-test",
+        "vscjava.vscode-maven",
+        "vscode-icons-team.vscode-icons",
+        "yzhang.markdown-all-in-one",
+        "zachflower.uncrustify",
+        "zainchen.json"
       ]
     }
   },
   "runArgs": [
-    "--env", "DISPLAY=192.168.240.32:0.0",
+    "--gpus=all",
+    "--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+    "--volume=/home/jatin/.Xauthority:/root/.Xauthority",
     "--env", "QT_X11_NO_MITSHM=1",
-    "--volume", "/tmp/.X11-unix:/tmp/.X11-unix"
+    "--env", "XDG_RUNTIME_DIR=/tmp/runtime-docker",
+    "--env", "DISPLAY=${env:DISPLAY}",
+    "--ipc=host",
+    "--network=host",
+    "--privileged"
   ],
-  "workspaceFolder": "/home/vscode/XARM",
+  "workspaceFolder": "/home/ubuntu/XARM",
   "mounts": [
-    "source=${localWorkspaceFolder},target=/home/vscode/XARM,type=bind"
+    "source=${localWorkspaceFolder},target=/home/ubuntu/XARM,type=bind"
   ],
-  // "onCreateCommand": "bash .devcontainer/create.sh",
-  "updateContentCommand": "bash .devcontainer/update_content.sh",
-  "postCreateCommand": "bash .devcontainer/post_create.sh"
+  "onCreateCommand": "./.devcontainer/create.sh",
+  "updateContentCommand": "./.devcontainer/update_content.sh",
+  "postCreateCommand": "./.devcontainer/post_create.sh"
 }
+
+
+
+
+// USE THIS TO GENERATE THE EXTENSIONS LIST
+// code --list-extensions | sed 's/^/        "/; s/$/",/' 
