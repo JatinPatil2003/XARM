@@ -66,8 +66,7 @@
       <xacro:common_link_visual 
         mesh_filename="${visual_dir}/link_base"  
         origin_xyz="0 0 0" 
-        origin_rpy="0 0 0"
-        material_name="${prefix}White" />
+        origin_rpy="0 0 0" />
       <xacro:common_link_collision 
         mesh_filename="${collision_dir}/link_base"  
         add_mesh_suffix="${add_mesh_suffix}" 
@@ -82,8 +81,7 @@
       <xacro:common_link_visual 
         mesh_filename="${visual_dir}/link1"  
         origin_xyz="0 0 0" 
-        origin_rpy="0 0 0"
-        material_name="${prefix}White" />
+        origin_rpy="0 0 0" />
       <xacro:common_link_collision 
         mesh_filename="${collision_dir}/link1"  
         add_mesh_suffix="${add_mesh_suffix}" 
@@ -111,8 +109,7 @@
       <xacro:common_link_visual 
         mesh_filename="${visual_dir}/link2"  
         origin_xyz="0 0 0" 
-        origin_rpy="0 0 0"
-        material_name="${prefix}White" />
+        origin_rpy="0 0 0" />
       <xacro:common_link_collision 
         mesh_filename="${collision_dir}/link2"  
         add_mesh_suffix="${add_mesh_suffix}" 
@@ -140,8 +137,7 @@
       <xacro:common_link_visual 
         mesh_filename="${visual_dir}/link3"  
         origin_xyz="0 0 0" 
-        origin_rpy="0 0 0"
-        material_name="${prefix}White" />
+        origin_rpy="0 0 0" />
       <xacro:common_link_collision 
         mesh_filename="${collision_dir}/link3"  
         add_mesh_suffix="${add_mesh_suffix}" 
@@ -169,8 +165,7 @@
       <xacro:common_link_visual 
         mesh_filename="${visual_dir}/link4"  
         origin_xyz="0 0 0" 
-        origin_rpy="0 0 0"
-        material_name="${prefix}White" />
+        origin_rpy="0 0 0" />
       <xacro:common_link_collision 
         mesh_filename="${collision_dir}/link4"  
         add_mesh_suffix="${add_mesh_suffix}" 
@@ -198,8 +193,7 @@
       <xacro:common_link_visual 
         mesh_filename="${visual_dir}/link5"  
         origin_xyz="0 0 0" 
-        origin_rpy="0 0 0"
-        material_name="${prefix}White" />
+        origin_rpy="0 0 0" />
       <xacro:common_link_collision 
         mesh_filename="${collision_dir}/link5"  
         add_mesh_suffix="${add_mesh_suffix}" 
@@ -227,8 +221,7 @@
       <xacro:common_link_visual 
         mesh_filename="${visual_dir}/link6"  
         origin_xyz="0 0 0" 
-        origin_rpy="0 0 0"
-        material_name="${prefix}White" />
+        origin_rpy="0 0 0" />
       <xacro:common_link_collision 
         mesh_filename="${collision_dir}/link6"  
         add_mesh_suffix="${add_mesh_suffix}" 
@@ -256,8 +249,7 @@
       <xacro:common_link_visual 
         mesh_filename="${link7_visual}"  
         origin_xyz="0 0 0" 
-        origin_rpy="0 0 0"
-        material_name="${prefix}Silver" />
+        origin_rpy="0 0 0" />
       <xacro:common_link_collision 
         mesh_filename="${link7_collision}"  
         add_mesh_suffix="${add_mesh_suffix}" 

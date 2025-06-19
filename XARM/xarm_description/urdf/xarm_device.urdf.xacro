@@ -39,7 +39,7 @@
   <xacro:arg name="baud_checkset" default="true"/>
   <xacro:arg name="default_gripper_baud" default="2000000"/>
   
-  <xacro:arg name="attach_to" default="world"/>
+  <xacro:arg name="attach_to" default="base_footprint"/>
   <xacro:arg name="attach_xyz" default="0 0 0"/>
   <xacro:arg name="attach_rpy" default="0 0 0"/>
   <xacro:arg name="mesh_suffix" default="stl"/>

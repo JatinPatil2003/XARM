@@ -81,7 +81,7 @@
             <box size="${geometry_length} ${geometry_width} ${geometry_height}"/>
           </xacro:if>
         </geometry>
-        <material name="${prefix}White" />
+        <!-- <material name="${prefix}White" /> -->
       </visual>
       <collision>
         <origin xyz="${_origin_xyz}" rpy="${_origin_rpy}" />

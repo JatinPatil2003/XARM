@@ -42,7 +42,6 @@
         </xacro:unless>
       </geometry>
       <origin xyz="${origin_xyz}" rpy="${origin_rpy}"/>
-      <material name="${material_name}" />
     </visual>
   </xacro:macro>
   
