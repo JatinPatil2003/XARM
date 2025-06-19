@@ -119,7 +119,7 @@ def launch_setup(context, *args, **kwargs):
             'attach_xyz': attach_xyz,
             'attach_rpy': attach_rpy,
             'no_gui_ctrl': no_gui_ctrl,
-            'show_rviz': 'false',
+            'show_rviz': 'true',
             'use_sim_time': 'true',
             'moveit_config_dump': moveit_config_dump,
         }.items(),
@@ -141,7 +141,7 @@ def launch_setup(context, *args, **kwargs):
     )
 
     return [
-        robot_gazebo_launch,
+        # robot_gazebo_launch,
         robot_moveit_common_launch,
     ]
 

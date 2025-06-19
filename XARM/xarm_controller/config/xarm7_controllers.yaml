@@ -1,12 +1,15 @@
 controller_manager:
   ros__parameters:
-    update_rate: 150  # Hz
+    update_rate: 30  # Hz
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
     xarm7_traj_controller:
       type: joint_trajectory_controller/JointTrajectoryController
+
+    xarm7_posi_controller:
+      type: forward_command_controller/ForwardCommandController
 
 xarm7_traj_controller:
   ros__parameters:
@@ -36,3 +39,15 @@ xarm7_traj_controller:
     interface_name: position
     state_publish_rate: 25.0
     action_monitor_rate: 10.0
+
+xarm7_posi_controller:
+  ros__parameters:
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+      - joint7
+    interface_name: position
