@@ -329,8 +329,8 @@ class MoveItConfigsBuilder(ParameterBuilder):
             'add_other_geometry': add_other_geometry,
         }
 
-        self.__urdf_package = Path(get_package_share_directory('xarm_description'))
-        self.__urdf_file_path = Path('urdf/xarm_device.urdf.xacro')
+        self.__urdf_package = Path(get_package_share_directory('naviarm_description'))
+        self.__urdf_file_path = Path('urdf/naviarm_moveit_arm.xacro')
         self.__srdf_file_path = Path('srdf/xarm.srdf.xacro')
 
         self.__robot_description = 'robot_description'
