@@ -4,7 +4,7 @@
     prefix:=''
     hw_ns:='xarm'
     limited:=false
-    is_ros2:=true
+    is_ros2:=false
     velocity_control:=false
     add_gripper:=false 
     add_bio_gripper:=false 
